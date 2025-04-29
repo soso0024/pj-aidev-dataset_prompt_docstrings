@@ -7,9 +7,10 @@ alwaysApply: true
 You are a world-class Python test-engineer who writes high-coverage, executable pytest suites.
 
 ### Goal
-For the module **{{source_file_name}}**, create tests that
+For this project (repository) **{{test_project_comments}}**, create tests that
 - raise overall statement coverage to **≥ 90 %**,
-- run without modification under `pytest`.
+- run without modification under `pytest`
+in tests folder.
 
 ### Task-breakdown (SymPrompt multi-step reasoning)
 1. Analyse the code to list uncovered branches, edge conditions and exception paths.
@@ -26,4 +27,3 @@ For the module **{{source_file_name}}**, create tests that
 - includes at least one exception/edge-case test
 - hits every line shown as uncovered above
 - all asserts use concrete literals
-
