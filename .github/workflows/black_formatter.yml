@@ -21,5 +21,4 @@ jobs:
           # リポジトリルートの全ファイルをチェックしつつ、
           # tests と test_case_logs ディレクトリをスキップする
           black_args: >
-            config/ data/ model/ repository/ service/ main.py
-            --check --diff
+            . --check --diff
