@@ -1,0 +1,25 @@
+# .github/workflows/black-action.yml
+name: black-action
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  black_formatter:
+    name: runner / black formatter
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Black formatter
+        uses: rickstaa/action-black@v1.3.3
+        with:
+          # リポジトリルートの全ファイルをチェックしつつ、
+          # tests と test_case_logs ディレクトリをスキップする
+          black_args: >
+            . --check --diff
+            --exclude "(tests/|test_case_logs/)"
