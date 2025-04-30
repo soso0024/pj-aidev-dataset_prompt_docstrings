@@ -38,8 +38,10 @@ class User:
             float: The new balance
 
         Raises:
-            ValueError: If the amount exceeds the user's balance
+            ValueError: If the amount exceeds the user's balance or is negative
         """
+        if amount < 0:
+            raise ValueError("Amount cannot be negative")
         if amount > self.balance:
             raise ValueError("Insufficient funds")
         self.balance -= amount
@@ -54,6 +56,11 @@ class User:
 
         Returns:
             float: The new balance
+
+        Raises:
+            ValueError: If the amount is negative
         """
+        if amount < 0:
+            raise ValueError("Amount cannot be negative")
         self.balance += amount
         return self.balance

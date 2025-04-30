@@ -27,8 +27,12 @@ def make_payment(user_id: int, amount: float):
         float: The user's new balance after the payment
 
     Raises:
-        ValueError: If the user is not found or has insufficient balance
+        ValueError: If the user is not found, has insufficient balance,
+                   or if the payment amount is not positive
     """
+    if amount <= 0:
+        raise ValueError("Payment amount must be positive")
+
     user = get_user(user_id)
     if not user:
         raise ValueError("User not found")

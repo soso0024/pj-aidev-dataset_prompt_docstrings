@@ -19,7 +19,13 @@ def generate_users(n):
 
     Returns:
         list: A list of User objects with sequential IDs and random balances
+
+    Raises:
+        ValueError: If n is negative
     """
+    if n < 0:
+        raise ValueError("Number of users must be positive")
+
     users = []
     for i in range(1, n + 1):
         users.append(User(id=i, name=f"User{i}", balance=random.uniform(10, 100)))
