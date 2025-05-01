@@ -5,6 +5,7 @@ You are a world-class Python test-engineer who writes high-coverage, executable 
 ### Scope
 
 Work only with the existing test files listed below; do not create, modify, or import any other files.
+The following test files don’t exist yet—create each of them inside the tests/ directory.
 
 - test_config.py
 - test_data_generator.py
