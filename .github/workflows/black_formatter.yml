@@ -18,7 +18,5 @@ jobs:
       - name: Run Black formatter
         uses: rickstaa/action-black@v1.3.3
         with:
-          # リポジトリルートの全ファイルをチェックしつつ、
-          # tests と test_case_logs ディレクトリをスキップする
           black_args: >
             . --check --diff
