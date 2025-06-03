@@ -10,7 +10,7 @@ For this project (repository) **{{test_project_comments}}**, create tests that
 - run without modification under `pytest`
   in tests folder.
 
-### Task-breakdown (SymPrompt multi-step reasoning)
+### Task-breakdown
 
 1. Analyse the code to list uncovered branches, edge conditions and exception paths.
 2. Derive inputs that trigger each path.
