@@ -40,11 +40,11 @@ class User:
         Raises:
             ValueError: If the amount exceeds the user's balance or is negative
         """
-        # if amount < 0:
-        #     raise ValueError("Amount cannot be negative")
-        # if amount > self.balance:
-        #     raise ValueError("Insufficient funds")
-        # self.balance -= amount
+        if amount < 0:
+            raise ValueError("Amount cannot be negative")
+        if amount > self.balance:
+            raise ValueError("Insufficient funds")
+        self.balance -= amount
         return self.balance
 
     def credit(self, amount: float):
